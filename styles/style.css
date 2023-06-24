@@ -1,0 +1,248 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body div.basemap {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../images/稻荷大社.jpg");
+  background-color: transparent;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -5;
+}
+body header {
+  background-color: black;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 6px -6px #2d2d2d;
+}
+body header section.left {
+  flex: 0 1 420px;
+  display: flex;
+  align-items: center;
+}
+body header section.left img {
+  width: 80px;
+  height: 70px;
+  margin: 0 1rem;
+}
+body header section.left h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+body header nav.right {
+  flex: 0 1 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header nav.right ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+body header nav.right ul li {
+  padding: 0.5rem;
+}
+body header nav.right ul li a {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+body header nav.right ul li a:hover {
+  color: purple;
+  border-bottom: 3px solid purple;
+}
+body main section.change-image {
+  width: 100%;
+  min-height: 70vh;
+  background-image: url("../images/spring.jpg");
+  background-color: transparent;
+  background-position: center bottom -35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.change-image div.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body main section.change-image h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+body main section.info-circles {
+  background-color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section.info-circles h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+body main section.info-circles div.circles {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body main section.info-circles div.circles div.circle {
+  padding: 0 1.5rem;
+}
+body main section.info-circles div.circles div.circle img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+body main section.info-circles div.circles div.circle img:hover {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid purple;
+}
+body main section.info-circles div.circles div.circle p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+body main section.empty-container {
+  min-height: 60vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.empty-container h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+body main section.googlemap {
+  background-color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main section.googlemap h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+body main section.googlemap p {
+  padding: 1rem 0;
+}
+body main section.googlemap iframe {
+  width: 100%;
+  height: 40vh;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body footer img {
+  width: 150px;
+  height: 120px;
+}
+body footer h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+body footer div.links img {
+  width: 50px;
+  height: 50px;
+}
+body footer h4 {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 940px) {
+  body header {
+    height: 15vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body header section.left {
+    flex: 1 1 400px;
+  }
+  body header section.left img {
+    width: 60px;
+    height: 50px;
+  }
+  body header section.left h1 {
+    font-size: 1.5rem;
+  }
+  body header nav.right {
+    flex: 1 1 500px;
+  }
+  body header nav.right ul li {
+    padding: 0 1rem;
+  }
+  body header nav.right ul li a {
+    font-size: 1rem;
+  }
+  body footer img {
+    width: 120px;
+    height: 90px;
+  }
+  body footer h3 {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+  body footer div.links img {
+    width: 35px;
+    height: 35px;
+  }
+  body footer h4 {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
